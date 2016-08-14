@@ -16,6 +16,7 @@ object Ex10 extends App {
 
   def compute(x: Double, n: Int): Double = {
     if (n > 0 && n % 2 == 0) pow( compute(x, n/2), 2)
+    // if (n > 0 && n % 2 == 0) compute( pow(x, n/2), 2)
     else if (n > 0 && n % 2 != 0) x * compute(x, n - 1)
     else if (n < 0) 1 / compute(x, -n)
     else 1
